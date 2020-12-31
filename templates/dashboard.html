@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+        <title class="title">Data Visualization</title>
+      </head>
+<body>
+<h1 style="font-size:76px ;font-family: 'Caveat', cursive;color:darkslategrey;">Data Visualization</h1><br>
+<p>
+<div class="table jumbotron container">{{ data | safe }}</div>
+{{ response }}
+</p>
+<form action="{{ url_for('display') }}" method="POST" name="data" class="jumbotron">
+    
+    <label class="form-group">Choose x-axis value :</label>
+    <select name="x_value" id="id_select" value="" class="form-control">
+        <option value="none" selected disabled hidden> 
+            Select an Option 
+        </option> 
+        {% for i in df_cols %}
+        <option value="{{i}}">{{i}}</option>
+        {% endfor %}
+    </select><br>
+    <label class="form-group">Choose y-axis value :</label>
+    <select name="y_value" id="id_select1" value="" class="form-control">
+        <option value="none" selected disabled hidden> 
+            Select an Option 
+        </option> 
+        {% for i in df_cols %}
+        <option value="{{i}}">{{i}}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <input type="submit" value="Submit" class="btn btn-success btn-lg">
+</form>
+
+</body>
+</html>

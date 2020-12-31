@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width , initial-scale=1">
+    <title class="title">Data Visualization</title>
+  </head>
+  <body style="background-image: url({{ url_for('static', filename='bg2.jpg') }});
+  background-size: cover;background-attachment: fixed;">
+    <div class="jumbotron">
+      <h1>Data Visualization</h1>
+      <div class="panel panel-primary">
+        <form class="form-inline" action="{{ url_for('dashboard') }}" method="post" enctype="multipart/form-data">
+          <div class="form-group"><input class="form-control" type="file" name="file"></div>
+          <div class="form-group"><input class="form-control" type="submit" value="Submit"></div>
+        </div>
+      </form>
+      </div>
+      <center>
+        <div class="container">
+          <h3 style="font-size:76px ;font-family: 'Caveat', cursive;color:darkslategrey;">Training Analytics Dashboard</h3>
+          <h5 style="font-size:66px ;font-family: 'Caveat', cursive">A Team work by =></h5><br>
+          <h6 style="font-size:56px ;font-family: 'Caveat', cursive">Bharat Chandra</h6>
+          <h6 style="font-size:56px ;font-family: 'Caveat', cursive">Shanmukh</h6>
+          <h6 style="font-size:56px ;font-family: 'Caveat', cursive">Bharadvaj</h6>
+          <h6 style="font-size:56px ;font-family: 'Caveat', cursive">Abhishikth</h6>
+        </div>
+      </center>
+  </body>
+</html>

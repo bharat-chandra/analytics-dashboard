@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MyFlaskApp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container jumbotron">
+        {% block body %}
+        <a href="{{ url }}" download><img src="{{ url }}" alt="my plot" width="1000px"></a>
+        {% endblock %}
+        </div><br>
+        <!--<img src="static/pair.png" alt="hmm"/>-->
+    </body>
+</html>
